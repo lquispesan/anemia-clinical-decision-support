@@ -1,6 +1,9 @@
 import sys
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.append(str(ROOT))
+
 import streamlit as st
 from app.historial import Historial
 
@@ -9,6 +12,7 @@ sys.path.append(str(ROOT))
 
 
 from app.predictor import Predictor
+from app.historial import Historial
 
 
 st.title("Sistema de apoyo para detección de anemia")
@@ -99,3 +103,15 @@ if st.button("Realizar predicción"):
         f"Probabilidad no anemia: "
         f"{resultado['probabilidad_no_anemia']}%"
     )
+    st.divider()
+
+    st.subheader("Historial de predicciones")
+
+    historial = Historial()
+
+    df = historial.leer()
+
+    if not df.empty:
+        st.dataframe(df)
+    else:
+        st.info("No existen predicciones registradas.")
