@@ -2,7 +2,7 @@ import sys
 from pathlib import Path
 
 import streamlit as st
-
+from app.historial import Historial
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.append(str(ROOT))
@@ -67,6 +67,18 @@ if st.button("Realizar predicción"):
         mch,
         mchc
     )
+    historial = Historial()
+
+    historial.guardar(
+        rbc,
+        hgb,
+        hct,
+        mcv,
+        mch,
+        mchc,
+        resultado
+    )
+    
 
 
     st.subheader("Resultado")
