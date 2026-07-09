@@ -23,7 +23,7 @@ st.write(
 
 
 rbc = st.number_input(
-    "RBC",
+    "RBC (Recuento de Eritrocitos)",
     min_value=0.0,
     value=4.5
 )
@@ -35,25 +35,25 @@ hgb = st.number_input(
 )
 
 hct = st.number_input(
-    "HCT",
+    "HCT (Hematocrito)",
     min_value=0.0,
     value=36.0
 )
 
 mcv = st.number_input(
-    "MCV",
+    "MCV (Volumen Corpuscular medio)",
     min_value=0.0,
     value=85.0
 )
 
 mch = st.number_input(
-    "MCH",
+    "MCH (Hemoglobina Corpuscular Media)",
     min_value=0.0,
     value=28.0
 )
 
 mchc = st.number_input(
-    "MCHC",
+    "MCHC (Concentracion de Hemoglobina Corpuscular)",
     min_value=0.0,
     value=33.0
 )
