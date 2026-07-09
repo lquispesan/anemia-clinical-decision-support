@@ -1,0 +1,16 @@
+streamlit
+pandas
+numpy
+scikit-learn
+joblib
+
+chromadb
+langchain
+langchain-community
+langchain-chroma
+langchain-ollama
+langchain-text-splitters
+
+ollama
+
+pypdf
